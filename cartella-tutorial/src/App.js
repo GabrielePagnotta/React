@@ -1,16 +1,22 @@
 import React from "react";
-import Card from "./Card"
-// import ComponenteUno from "./componenteUno";
+import ComponenteDiProva from "./ComponenteDiProva"
+import ComponenteDiProva2 from "./ComponenteDiProva2"
+
+const cards = {
+  nome : "Gabriele",
+  cognome : "Pagnotta"
+}
+
+const cards2 = {
+  nome : "Giovanni",
+  cognome : "Magis"
+}
 
 function App() {
   return (
     <div className="App">
-      {/* creazione di un componente: */}
-      {/* <ComponenteUno/> */}
-      
-      {/* creazione di un componente con stilizzazione di esso: */}
-      <Card />
-      
+      <ComponenteDiProva nome={cards.nome} cognome={cards.cognome} />
+      <ComponenteDiProva2 {...cards2}/>
     </div>
   );
   
